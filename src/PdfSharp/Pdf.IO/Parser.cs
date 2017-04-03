@@ -228,6 +228,7 @@ namespace PdfSharp.Pdf.IO
                         ReadSymbol(Symbol.EndObj);
                     return pdfObject;
 
+                case Symbol.UnicodeString:
                 case Symbol.String:
                     pdfObject = new PdfStringObject(_document, _lexer.Token);
                     pdfObject.SetObjectID(objectNumber, generationNumber);
